@@ -1,8 +1,14 @@
+// main.cpp
 #include "Rational.h"
 #include <iostream>
 #include <Windows.h>
 using namespace std;
 
+Rational makeRational(int a, int b) {
+	Rational r;
+	r.Init(a, b);
+	return r;
+}
 
 int main()
 {
@@ -40,21 +46,21 @@ int main()
 
 	cout << endl;
 
-	r.Init(3, 5);
-	r1.Init(10, 15);
-	r.Display();
-	r1.Display();
+	Rational r3 =  makeRational(3, 5);
+	Rational r4 = makeRational(10, 15);
+	r3.Display();
+	r4.Display();
 	cout << endl;
 
-	cout << r.getA() << "/" << r.getB() << " == " << r1.getA() << "/" << r1.getB() << " = " << r.equal(r1) << endl;
-	cout << r.getA() << "/" << r.getB() << " > " << r1.getA() << "/" << r1.getB() << " = " << r.great(r1) << endl;
-	cout << r.getA() << "/" << r.getB() << " < " << r1.getA() << "/" << r1.getB() << " = " << r.less(r1) << endl;
+	cout << r3.getA() << "/" << r3.getB() << " == " << r4.getA() << "/" << r4.getB() << " = " << r3.equal(r4) << endl;
+	cout << r3.getA() << "/" << r3.getB() << " > " << r4.getA() << "/" << r4.getB() << " = " << r3.great(r4) << endl;
+	cout << r3.getA() << "/" << r3.getB() << " < " << r4.getA() << "/" << r4.getB() << " = " << r3.less(r4) << endl;
 
 	cout << endl;
 
-	cout << r.getA() << "/" << r.getB() << " == " << r1.getA() << "/" << r1.getB() << " = " << equal(r, r1) << endl;
-	cout << r.getA() << "/" << r.getB() << " > " << r1.getA() << "/" << r1.getB() << " = " << great(r, r1) << endl;
-	cout << r.getA() << "/" << r.getB() << " < " << r1.getA() << "/" << r1.getB() << " = " << less_than(r, r1) << endl;
+	cout << r3.getA() << "/" << r3.getB() << " == " << r4.getA() << "/" << r4.getB() << " = " << equal(r3, r4) << endl;
+	cout << r3.getA() << "/" << r3.getB() << " > " << r4.getA() << "/" << r4.getB() << " = " << great(r3, r4) << endl;
+	cout << r3.getA() << "/" << r3.getB() << " < " << r4.getA() << "/" << r4.getB() << " = " << less_than(r3, r4) << endl;
 
 
 	return 0;
